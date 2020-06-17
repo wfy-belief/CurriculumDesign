@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>信息提交页面V0.2版本</title>
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/wfy-belief/PicGo-images/img/favicon.png" />
+    <link rel="stylesheet" href="/static/css/votes.css">
+    <link rel="stylesheet" href="/static/css/model.css">
+</head>
+
+<body>
+    <ul>
+        <li><a class="active" href="/submit">竞选</a></li>
+        <li><a href="/votes">投票</a></li>
+        <li><a href="/rank">排名图表</a></li>
+    </ul>
+    <!-- 弹窗 -->
+    <div id="myModal" class="modal">
+        <!-- 弹窗内容 -->
+        <div class="modal-content">
+            <span class="close">✘</span>
+            <div class="modal-header">
+                <h4>{{mes_title}}</h4>
+            </div>
+            <div class="modal-body">
+                {% for mes in mes_cont %}
+                <p style="font-size: 12;font-weight: bold;color: #a64942;">{{mes}}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+
+
+    <!--背景-->
+    <form action="/votes-info" method="post">
+        {% csrf_token %}
+        <div class="main">
+            <!--信息提交页面-->
+            <div class="infoFrame">
+                <p class="infoTitle">投票表单</p>
+                <table style="width: 100%;">
+                    <caption>当前得票情况</caption>
+                    <thead>
+                        <tr>
+                            <th>rank
+                            <th>name
+                            <th>votes
+                            <th>投票
+                    </thead>
+                    <tbody>
+
+                        {% for student in students %}
+                        <tr>
+                            <td>{{student.rank}}
+                            <td>{{student.name}}
+                            <td>{{student.votes}}
+                            <td> <input type="submit" class="enterBut" style="border-bottom:none;" name={{student.id}}
+                                    value="投票">
+                                {% endfor %}
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+    </form>
+    <script type="text/javascript" src="/static/js/model.js"></script>
+    <!--弹窗-->
+    {% if not flag %}
+    <script>
+        flag_onclick();
+    </script>
+    {% endif %}
+
+</body>
+
+</html>

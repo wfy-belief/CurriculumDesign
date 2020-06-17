@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>排名信息</title>
+    <link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/wfy-belief/PicGo-images/img/favicon.png" />
+    <link rel="stylesheet" href="/static/css/submit.css">
+</head>
+
+<body>
+    <ul>
+        <li><a class="active" href="/submit">竞选</a></li>
+        <li><a href="/votes">投票</a></li>
+        <li><a href="/rank">排名图表</a></li>
+    </ul>
+    <!--背景-->
+    <div class="main" >
+        <!--信息提交页面-->
+        <div class="infoFrame" style="background-color: white;">
+            <!--当前布局的标题-->
+            <p class="infoTitle">竞选学生申请表</p>
+            <div style="height: 200px;width: auto;">
+            {{ c.rank|safe }}
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

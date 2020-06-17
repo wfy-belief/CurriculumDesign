@@ -1,0 +1,183 @@
+/*更改默认值*/
+html,
+body {
+    width: 100%;
+    background:
+        linear-gradient(227deg, #84AF9B 0%, #C5C6C8 100%),
+        linear-gradient(155deg, rgba(255, 255, 255, 0.50) 5%, rgba(0, 0, 0, 0.50) 100%);
+    background-blend-mode: multiply;
+}
+
+/*添加背景图片*/
+.main {
+    width: 100%;
+    height: auto;
+    /*background: url("/static/images/back.jpg") 100% 100% no-repeat;*/
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*让输入框居中*/
+.infoFrame {
+    width: 700px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    /*添加边框圆角*/
+    border-radius: 10px;
+
+    /*添加边距挤下去*/
+    padding: 50px 0;
+    box-sizing: border-box;
+    /*添加阴影*/
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.4);
+
+}
+
+/*改变盒子下方的输入框位置*/
+.infoFrame>div {
+    width: 250px;
+    height: 50px;
+    margin: 10px auto;
+    /*改变字体颜色*/
+    color: white;
+    flex-direction: row;
+    justify-content: space-between;
+    display: flex;
+}
+
+/*改变标题居中, 并且改颜色*/
+.infoFrame>p {
+    text-align: center;
+    color: white;
+    font-size: 22px;
+}
+
+/*改变输入框文字
+.infoFrame > div {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+}*/
+
+/*改变输入框和文字样式*/
+.infoFrame>div span,
+input,
+textarea {
+    width: 100%;
+    height: 30px;
+    /*透明色*/
+    background: transparent;
+    /*清除默认边框*/
+    border: none;
+    /*添加底部边框*/
+    border-bottom: 1px solid white;
+    /*清除蓝色点击框*/
+    outline: none;
+    /*改变文字颜色*/
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.infoFrame>div span {
+    width: auto;
+}
+
+/*改变点击登录按钮样式*/
+.infoFrame .enterBut {
+    width: 150px;
+    height: 30px;
+    /*添加圆角*/
+    border-radius: 50px;
+    /*设置背景颜色  渐变*/
+    background-image: linear-gradient(to right, #c979d4, #fa719d);
+    text-align: center;
+    padding-top: 0px;
+    box-sizing: border-box;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/*给登录按钮添加 鼠标放上效果 */
+.infoFrame .enterBut:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) inset;
+}
+
+/*给输入框提醒文字改变颜色*/
+/*适配谷歌*/
+input::-webkit-input-placeholder {
+    color: #BDCADA;
+}
+
+svg {
+    vertical-align: middle;
+}
+
+
+table {
+    border-collapse: collapse;
+    font-family: Futura, Arial, sans-serif;
+    color: #e59572;
+}
+
+caption {
+    font-size: larger;
+    margin: 1em auto;
+}
+
+th,
+td {
+    padding: .65em;
+}
+th,
+td {
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
+.button {
+    width: 150px;
+    height: 30px;
+    /*添加圆角*/
+    border-radius: 50px;
+    /*设置背景颜色  渐变*/
+    background-image: linear-gradient(to right, #9dd3a8, #fa719d);
+    text-align: center;
+    padding-top: 0px;
+    box-sizing: border-box;
+    font-size: 16px;
+    cursor: pointer;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
