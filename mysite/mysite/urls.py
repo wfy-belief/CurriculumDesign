@@ -14,19 +14,13 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.conf.urls import url
-from . import views,testdb,search,search2,submit
 from django.contrib import admin
-from CurriculumDesign import MyEcharts
-from CurriculumDesign import votes
+from CurriculumDesign import MyEcharts,Submit,Votes
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    # url(r'^search-form$', search.search_form),
-    # url(r'^search$', search.search),
-    # url(r'^search-post$', search2.search_post),
-    url(r'^submit$', submit.submit_form, name='submit'),
-    url(r'^submit-info$', submit.submit_to_mysql),
-    url(r'^index$', views.index),
-    url(r'^rank$', MyEcharts.index, name='index'),
-    url(r'^votes$', votes.submit_votes),
-    url(r'^votes-info$', votes.get_info),
+    url(r'^submit$', Submit.submit_form,),
+    url(r'^submit-info$', Submit.submit_to_mysql),
+    url(r'^rank$', MyEcharts.index,),
+    url(r'^votes$', Votes.submit_votes),
+    url(r'^votes-info$', Votes.get_info),
 ]

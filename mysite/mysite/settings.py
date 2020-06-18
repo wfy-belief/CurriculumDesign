@@ -25,7 +25,7 @@ SECRET_KEY = '1st7-x2)$t&($1_41k=a&bey-(26i=%@zwnjccwwjd=+owhi)e'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', '139.9.119.40']
 
 
 # Application definition
@@ -88,10 +88,10 @@ DATABASES = {
     { 
         'ENGINE': 'django.db.backends.mysql',    # 数据库引擎
         'NAME': 'info', # 数据库名称
-        'HOST': '', # 数据库地址，本机 ip 地址 127.0.0.1 
+        'HOST': '121.36.17.21', # 数据库地址，本机 ip 地址 127.0.0.1 
         'PORT': 3306, # 端口 
-        'USER': '',  # 数据库用户名
-        'PASSWORD': '', # 数据库密码
+        'USER': 'user01',  # 数据库用户名
+        'PASSWORD': '666666', # 数据库密码
     }  
 }
 
